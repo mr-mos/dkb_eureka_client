@@ -2,6 +2,7 @@ package de.moscon.dkb_eureka_client;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
+import org.springframework.cloud.netflix.eureka.EnableEurekaClient;
 
 /*
      https://github.com/spring-guides/gs-service-registration-and-discovery
@@ -9,6 +10,7 @@ import org.springframework.boot.autoconfigure.SpringBootApplication;
      http://localhost:8080/service-instances/client-mos
  */
 
+@EnableEurekaClient
 @SpringBootApplication
 public class DkbEurekaClientApplication {
 
