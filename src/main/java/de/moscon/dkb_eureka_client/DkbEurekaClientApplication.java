@@ -5,6 +5,8 @@ import org.springframework.boot.autoconfigure.SpringBootApplication;
 
 /*
      https://github.com/spring-guides/gs-service-registration-and-discovery
+
+     http://localhost:8080/service-instances/client-mos
  */
 
 @SpringBootApplication
