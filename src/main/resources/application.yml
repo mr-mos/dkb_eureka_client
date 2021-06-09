@@ -1,0 +1,17 @@
+spring.application.name: mos-microservice
+
+feign:
+  client:
+    config:
+      default:
+        readTimeout: 2000
+
+resilience4j:
+  circuitbreaker:
+    instances:
+      getUserInfo:
+        failureRateThreshold: 50
+        minimumNumberOfCalls: 2
+        slidingWindowSize: 1
+        waitDurationInOpenState: 5s
+        slidingWindowType: COUNT_BASED

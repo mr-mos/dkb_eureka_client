@@ -20,6 +20,9 @@ public class VaccinationController {
 		if (lastname == null) {
 			return "Bitte gebe deinen Namen als 'lastname'-Parameter an";
 		}
+		if ("8882".equals(port)) {      // simulates a faulty instance
+			throw new IllegalArgumentException("Ooops, an error");
+		}
 		LocalDateTime nextDate = LocalDateTime.now().plusDays(new Random().nextInt(200));
 		return String.format("%s, dein Impftermin ist am  %tD. [Running on Port %s]", lastname, nextDate, port);
 	}
