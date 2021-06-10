@@ -14,6 +14,8 @@ import org.springframework.cloud.openfeign.EnableFeignClients;
 
      http://localhost:8080/callVaccinationService               // simlulates another client / microservice
 
+     http://localhost:8080/config
+
  */
 
 @EnableEurekaClient
