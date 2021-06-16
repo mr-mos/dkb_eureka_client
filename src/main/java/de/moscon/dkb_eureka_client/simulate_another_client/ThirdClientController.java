@@ -19,7 +19,7 @@ public class ThirdClientController {
 	@Autowired
 	private MosMicroserviceClient mosMicroserviceClient;
 
-	@CircuitBreaker(name="callVaccinationService", fallbackMethod = "getFallbackMessage")
+	@CircuitBreaker(name="vaccinationService", fallbackMethod = "getFallbackMessage")
 	@GetMapping("/callVaccinationService")
 	public String callVaccinationService() {
 		return "Ergebnis: " + mosMicroserviceClient.getNextVaccination("ThirdClientWithFeign");

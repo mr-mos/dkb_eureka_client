@@ -6,12 +6,18 @@ feign:
       default:
         readTimeout: 2000
 
+
+
 resilience4j:
   circuitbreaker:
     instances:
-      getUserInfo:
-        failureRateThreshold: 50
-        minimumNumberOfCalls: 2
-        slidingWindowSize: 1
+      testBreaker:
+        failureRateThreshold: 20
+        minimumNumberOfCalls: 5
         waitDurationInOpenState: 5s
+      vaccinationService:
+        failureRateThreshold: 20
+        minimumNumberOfCalls: 5
+        slidingWindowSize: 100
         slidingWindowType: COUNT_BASED
+        waitDurationInOpenState: 10s

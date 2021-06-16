@@ -16,6 +16,8 @@ import org.springframework.cloud.openfeign.EnableFeignClients;
 
      http://localhost:8080/config
 
+     http://localhost:8080/helloworld                          // simple circuit-breaker example
+
  */
 
 @EnableEurekaClient
